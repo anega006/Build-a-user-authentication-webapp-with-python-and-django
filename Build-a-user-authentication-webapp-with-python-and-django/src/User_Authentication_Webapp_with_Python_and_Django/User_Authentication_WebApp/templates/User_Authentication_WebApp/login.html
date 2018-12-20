@@ -1,0 +1,25 @@
+{% extends 'User_Authentication_WebApp/base.html' %}
+
+{% block content %}
+<h2 class="col-md-6">Log In</h2>
+<div class="col-md-6">
+	<form method="POST">
+		{% csrf_token %}
+	  <div class="form-group">
+	    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+	  </div>
+	  <div class="form-group">
+	    <input type="password" class="form-control" placeholder="Enter Password" name="password">
+	  </div>
+	  <div class="form-group form-check">
+	    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+	    <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Login</button>
+	</form>
+</div>
+<ul class="col-md-6 mt-3">
+		<li style="list-style-type:none"><small><a href="#">Forgot password?</a></small></li>
+		<li style="list-style-type:none"><small><a href="#">Forgot username?</a></small></li>
+</ul>
+{% endblock content %}
